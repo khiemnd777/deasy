@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy", "Deasy\Deasy.csproj", "{629B1552-3EBC-4E54-9C38-ACE328185CA3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy.Test.Mvc3", "Deasy.Test.Mvc3\Deasy.Test.Mvc3.csproj", "{FD79CD4E-7490-45BA-9D83-A4C748F07CB7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy.Test.Mvc4", "Deasy.Test.Mvc4\Deasy.Test.Mvc4.csproj", "{CE7531F3-DBAE-4A09-ADC4-9FA623E2C2C2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD79CD4E-7490-45BA-9D83-A4C748F07CB7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD79CD4E-7490-45BA-9D83-A4C748F07CB7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD79CD4E-7490-45BA-9D83-A4C748F07CB7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD79CD4E-7490-45BA-9D83-A4C748F07CB7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CE7531F3-DBAE-4A09-ADC4-9FA623E2C2C2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CE7531F3-DBAE-4A09-ADC4-9FA623E2C2C2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CE7531F3-DBAE-4A09-ADC4-9FA623E2C2C2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CE7531F3-DBAE-4A09-ADC4-9FA623E2C2C2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
