@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy", "Deasy\Deasy.csproj", "{629B1552-3EBC-4E54-9C38-ACE328185CA3}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy.Test.Mvc4", "Deasy.Test.Mvc4\Deasy.Test.Mvc4.csproj", "{5448D6FB-8511-4016-9A6F-C2EDCED2698C}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -17,6 +19,10 @@ Global
 		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{629B1552-3EBC-4E54-9C38-ACE328185CA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
