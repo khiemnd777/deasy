@@ -14,7 +14,7 @@ namespace Deasy.Infrastructure.DependencyManagement
         /// <summary>
         /// Tag used to identify registrations that are scoped to the HTTP request level.
         /// </summary>
-        public static readonly object HttpRequestTag = "AutofacWebRequest"; //httpRequest
+        public static readonly object HttpRequestTag = CommonHelper.HttpRequestTag; //httpRequest
 
         /// <summary>
         /// Initializes a module and prepares it to handle requests.

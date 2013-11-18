@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Web;
@@ -28,6 +29,16 @@ namespace Deasy
         public static bool IsNull<T>(this T obj)
         {
             return obj == null;
+        }
+
+        public static string HttpRequestTag
+        {
+            get 
+            {
+                var versionMajor = Assembly.GetAssembly(typeof(Autofac.ILifetimeScope)).GetName().Version.Major;
+
+                return versionMajor > 2 ? "AutofacWebRequest" : "httpRequest";
+            }
         }
 
         private static AspNetHostingPermissionLevel? _trustLevel = null;
