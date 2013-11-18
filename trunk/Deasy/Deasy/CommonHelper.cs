@@ -36,7 +36,6 @@ namespace Deasy
             get 
             {
                 var versionMajor = Assembly.GetAssembly(typeof(Autofac.ILifetimeScope)).GetName().Version.Major;
-
                 return versionMajor > 2 ? "AutofacWebRequest" : "httpRequest";
             }
         }
