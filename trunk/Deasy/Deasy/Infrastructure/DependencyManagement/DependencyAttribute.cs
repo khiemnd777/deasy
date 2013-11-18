@@ -8,12 +8,12 @@ namespace Deasy.Infrastructure.DependencyManagement
     [AttributeUsage(AttributeTargets.Class, AllowMultiple = true)]
     public class DependencyAttribute : Attribute
     {
-        public DependencyAttribute(ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public DependencyAttribute(LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             LifeStyle = lifeStyle;
         }
 
-        public DependencyAttribute(Type serviceType, ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public DependencyAttribute(Type serviceType, LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             LifeStyle = lifeStyle;
             ServiceType = serviceType;
@@ -22,7 +22,7 @@ namespace Deasy.Infrastructure.DependencyManagement
         /// <summary>The type of service the attributed class represents.</summary>
         public Type ServiceType { get; protected set; }
 
-        public ComponentLifeStyle LifeStyle { get; protected set; }
+        public LifeStyle LifeStyle { get; protected set; }
 
         /// <summary>Optional key to associate with the service.</summary>
         public string Key { get; set; }
