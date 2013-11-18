@@ -1,6 +1,9 @@
-﻿namespace Deasy.Test.Mvc4.Services
+﻿using Deasy.Infrastructure.DependencyManagement;
+
+namespace Deasy.Test.Mvc4.Services
 {
-    public interface IFooService : IDeasy
+    [Deasy(lifeStyle : ComponentLifeStyle.LifetimeScope)]
+    public interface IFooService
     {
         string Foo();
     }

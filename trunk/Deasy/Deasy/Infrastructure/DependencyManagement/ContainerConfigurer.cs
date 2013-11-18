@@ -47,13 +47,10 @@ namespace Deasy.Infrastructure.DependencyManagement
             //event broker
             containerManager.AddComponentInstance(broker);
 
-            //service registration
-            containerManager.AddComponent<DependencyAttributeRegistrator>("aaron.serviceRegistrator");
-            var registrator = containerManager.Resolve<DependencyAttributeRegistrator>();
-            var services = registrator.FindServices();
-            var configurations = GetComponentConfigurations(/*configuration*/);
-            services = registrator.FilterServices(services, configurations);
-            registrator.RegisterServices(services);
+            containerManager.AddComponent<DeasyAttributeRegistrator>();
+            var deasyAttributeRegistrator = containerManager.Resolve<DeasyAttributeRegistrator>();
+            var deasyAttributes = deasyAttributeRegistrator.FindDeasyAttributes();
+            deasyAttributeRegistrator.RegisterDeasy(deasyAttributes);
         }
 
         protected virtual string[] GetComponentConfigurations(/*AaronConfig configuration*/)

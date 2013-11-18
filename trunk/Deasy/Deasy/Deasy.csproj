@@ -50,6 +50,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="CommonHelper.cs" />
+    <Compile Include="DeasyAttribute.cs" />
+    <Compile Include="DeasyAttributeRegistrator.cs" />
     <Compile Include="Infrastructure\Core.cs" />
     <Compile Include="Infrastructure\AppManager.cs" />
     <Compile Include="Infrastructure\AppDomainTypeFinder.cs" />

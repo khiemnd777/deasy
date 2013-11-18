@@ -74,6 +74,7 @@ namespace Deasy
                 Func<Service, IEnumerable<IComponentRegistration>> registrationAccessor)
             {
                 var ts = service as TypedService;
+                //ts.ServiceType
                 if (ts != null && typeof(IDeasy).IsAssignableFrom(ts.ServiceType) && ts.ServiceType.IsInterface)
                 {
                     var builder = method.MakeGenericMethod(ts.ServiceType);
