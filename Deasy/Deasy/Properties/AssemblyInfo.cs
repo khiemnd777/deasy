@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Christian Digitalized Group")]
 [assembly: AssemblyProduct("Deasy")]
-[assembly: AssemblyCopyright("Copyright ©  2013")]
+[assembly: AssemblyCopyright("© 2013 CDG")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
