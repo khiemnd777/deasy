@@ -17,14 +17,8 @@ namespace Deasy.Test.Mvc4.Controllers
             _fooService = fooService;
         }
 
-        //public HomeController()
-        //{
-            
-        //}
-
         public ActionResult Index()
         {
-            //var _fooService = IoC.Resolve<IFooService>();
             ViewBag.Message = _fooService.Foo();
 
             return View();

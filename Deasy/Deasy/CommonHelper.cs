@@ -7,8 +7,29 @@ using System.Web;
 
 namespace Deasy
 {
-    public class CommonHelper
+    public static class CommonHelper
     {
+        public static void ForEach<T>(this T[] array, Action<T> action)
+        {
+            foreach (var obj in array)
+                action.Invoke(obj);
+        }
+
+        public static void ForEach<T>(this IList<T> list, Action<T> action)
+        {
+            ForEach<T>(list.ToArray(), action);
+        }
+
+        public static void ForEach<T>(this IEnumerable<T> list, Action<T> action)
+        {
+            ForEach<T>(list.ToArray(), action);
+        }
+
+        public static bool IsNull<T>(this T obj)
+        {
+            return obj == null;
+        }
+
         private static AspNetHostingPermissionLevel? _trustLevel = null;
 
         /// <summary>
