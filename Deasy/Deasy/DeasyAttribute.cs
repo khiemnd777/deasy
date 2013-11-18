@@ -9,7 +9,7 @@ namespace Deasy
         public ComponentLifeStyle LifeStyle { private set; get; }
         public string Key { private set; get; }
        
-        public DeasyAttribute(string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public DeasyAttribute(string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.LifetimeScope)
         {
             Key = key;
             LifeStyle = lifeStyle;
