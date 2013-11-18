@@ -24,22 +24,22 @@ namespace Deasy.Infrastructure.DependencyManagement
             get { return _container; }
         }
 
-        public void AddComponent<TService>(string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponent<TService>(string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             AddComponent<TService, TService>(key, lifeStyle);
         }
 
-        public void AddComponent(Type service, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponent(Type service, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             AddComponent(service, service, key, lifeStyle);
         }
 
-        public void AddComponent<TService, TImplementation>(string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponent<TService, TImplementation>(string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             AddComponent(typeof(TService), typeof(TImplementation), key, lifeStyle);
         }
 
-        public void AddComponent(Type service, Type implementation, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponent(Type service, Type implementation, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             UpdateContainer(x =>
             {
@@ -66,12 +66,12 @@ namespace Deasy.Infrastructure.DependencyManagement
             });
         }
 
-        public void AddComponentInstance<TService>(object instance, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponentInstance<TService>(object instance, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             AddComponentInstance(typeof(TService), instance, key, lifeStyle);
         }
 
-        public void AddComponentInstance(Type service, object instance, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponentInstance(Type service, object instance, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             UpdateContainer(x =>
             {
@@ -79,17 +79,17 @@ namespace Deasy.Infrastructure.DependencyManagement
             });
         }
 
-        public void AddComponentInstance(object instance, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponentInstance(object instance, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             AddComponentInstance(instance.GetType(), instance, key, lifeStyle);
         }
 
-        public void AddComponentWithParameters<TService, TImplementation>(IDictionary<string, string> properties, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponentWithParameters<TService, TImplementation>(IDictionary<string, string> properties, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             AddComponentWithParameters(typeof(TService), typeof(TImplementation), properties);
         }
 
-        public void AddComponentWithParameters(Type service, Type implementation, IDictionary<string, string> properties, string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.Singleton)
+        public void AddComponentWithParameters(Type service, Type implementation, IDictionary<string, string> properties, string key = "", LifeStyle lifeStyle = LifeStyle.Singleton)
         {
             UpdateContainer(x =>
             {
@@ -193,15 +193,15 @@ namespace Deasy.Infrastructure.DependencyManagement
     }
     public static class ContainerManagerExtensions
     {
-        public static Autofac.Builder.IRegistrationBuilder<TLimit, TActivatorData, TRegistrationStyle> PerLifeStyle<TLimit, TActivatorData, TRegistrationStyle>(this Autofac.Builder.IRegistrationBuilder<TLimit, TActivatorData, TRegistrationStyle> builder, ComponentLifeStyle lifeStyle)
+        public static Autofac.Builder.IRegistrationBuilder<TLimit, TActivatorData, TRegistrationStyle> PerLifeStyle<TLimit, TActivatorData, TRegistrationStyle>(this Autofac.Builder.IRegistrationBuilder<TLimit, TActivatorData, TRegistrationStyle> builder, LifeStyle lifeStyle)
         {
             switch (lifeStyle)
             {
-                case ComponentLifeStyle.LifetimeScope:
+                case LifeStyle.LifetimeScope:
                     return HttpContext.Current != null ? builder.InstancePerHttpRequest() : builder.InstancePerLifetimeScope();
-                case ComponentLifeStyle.Transient:
+                case LifeStyle.Transient:
                     return builder.InstancePerDependency();
-                case ComponentLifeStyle.Singleton:
+                case LifeStyle.Singleton:
                     return builder.SingleInstance();
                 default:
                     return builder.SingleInstance();

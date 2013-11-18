@@ -6,10 +6,10 @@ namespace Deasy
     [AttributeUsage(AttributeTargets.Interface | AttributeTargets.Class, Inherited=true, AllowMultiple=true)]
     public class DeasyAttribute : Attribute
     {
-        public ComponentLifeStyle LifeStyle { private set; get; }
+        public LifeStyle LifeStyle { private set; get; }
         public string Key { private set; get; }
        
-        public DeasyAttribute(string key = "", ComponentLifeStyle lifeStyle = ComponentLifeStyle.LifetimeScope)
+        public DeasyAttribute(string key = "", LifeStyle lifeStyle = LifeStyle.LifetimeScope)
         {
             Key = key;
             LifeStyle = lifeStyle;

@@ -1,6 +1,6 @@
-﻿namespace Deasy.Infrastructure.DependencyManagement
+﻿namespace Deasy
 {
-    public enum ComponentLifeStyle
+    public enum LifeStyle
     {
         Singleton = 0,
         Transient = 1,
