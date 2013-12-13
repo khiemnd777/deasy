@@ -8,7 +8,7 @@ namespace Deasy.Infrastructure
     public class AppManager
     {
         #region Initialization Methods
-        /// <summary>Initializes a static instance of the Nop factory.</summary>
+        /// <summary>Initializes a static instance of the Deasy factory.</summary>
         /// <param name="forceRecreate">Creates a new factory instance even though the factory has been previously initialized.</param>
         [MethodImpl(MethodImplOptions.Synchronized)]
         public static ICore Initialize(bool forceRecreate)
