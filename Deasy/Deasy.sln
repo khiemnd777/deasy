@@ -5,6 +5,10 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy", "Deasy\Deasy.csproj
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy.Test.Mvc3", "Deasy.Test.Mvc3\Deasy.Test.Mvc3.csproj", "{0F521D7B-7663-4E6A-90E7-C84A6ACA3A60}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy.v2", "Deasy.v2\Deasy.v2.csproj", "{2DE64F5A-4088-429F-8F5C-CDAA2C230268}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Deasy.Test.Mvc4", "Deasy.Test.Mvc4\Deasy.Test.Mvc4.csproj", "{5448D6FB-8511-4016-9A6F-C2EDCED2698C}"
+EndProject
 Global
 	GlobalSection(SubversionScc) = preSolution
 		Svn-Managed = True
@@ -23,6 +27,14 @@ Global
 		{0F521D7B-7663-4E6A-90E7-C84A6ACA3A60}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0F521D7B-7663-4E6A-90E7-C84A6ACA3A60}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0F521D7B-7663-4E6A-90E7-C84A6ACA3A60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2DE64F5A-4088-429F-8F5C-CDAA2C230268}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2DE64F5A-4088-429F-8F5C-CDAA2C230268}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2DE64F5A-4088-429F-8F5C-CDAA2C230268}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2DE64F5A-4088-429F-8F5C-CDAA2C230268}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5448D6FB-8511-4016-9A6F-C2EDCED2698C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
